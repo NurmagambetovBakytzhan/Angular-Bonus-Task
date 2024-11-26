@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="searchText" placeholder="Search..." />
+<button (click)="sortData()">Sort</button>
+<button (click)="filterData()">Filter</button>
+
+<ul>
+  <li *ngFor="let item of items">
+    Hello, my name is {{ item.name }}, my age is {{ item.hobby }}.
+    <button (click)="editItem(item)">Edit</button>
+    <button (click)="deleteItem(item.id)">Delete</button>
+  </li>
+</ul>
+
+
